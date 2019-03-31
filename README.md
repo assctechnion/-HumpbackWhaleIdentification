@@ -19,7 +19,7 @@ This section is divided to kaggle submissions, thus describing our work in layer
 * Ignoring classes with less than 5 samples
 * Randomly splitting to train-val with 25% val.
 
-run 'dataset_2_train_val_subfolders'
+run `dataset_2_train_val_subfolders`
 
 #### PreProcessing
 No preprocessing

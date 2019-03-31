@@ -13,5 +13,11 @@ An educational (closed) [Kaggle challenge](https://www.kaggle.com/c/whale-catego
 ## Introduction
 ## Related Work
 ## Implementation
+### Submission #0
+#### Dataset
+#### PreProcessing
+#### Network Architecture
+#### Results
+### Submission #1
 ## Discussion
 ## Conclusion

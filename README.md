@@ -8,14 +8,14 @@ An educational (closed) [Kaggle challenge](https://www.kaggle.com/c/whale-catego
 ## Table of Contents
 - [Introduction](#Introduction)
 - [Related Work](#Related-Work)
+- [Dataset Exploration](#Dataset-Exploration)
 - [Implementation](#Implementation)
 - [Discussion](#Discussion)
 - [Conclusion](#Conclusion)
 
-check
-
 ## Introduction
 ## Related Work
+## Dataset Exploration
 ## Implementation
 This section is divided to kaggle submissions, thus describing our work in layers.
 ### Submission #0

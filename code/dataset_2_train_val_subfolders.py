@@ -5,12 +5,12 @@ import shutil
 import os
 import sys
 
-labels = pd.read_csv('train.csv')
+labels = pd.read_csv('../data/train.csv')
 
 # Create `train_sep` directory
-train_dir = 'train/'
-val_sep_dir = 'val_sep/'
-train_sep_dir = 'train_sep/'
+train_dir = '../data/train/'
+val_sep_dir = '../data/val_sep/'
+train_sep_dir = '../data/train_sep/'
 if not os.path.exists(train_sep_dir):
     os.mkdir(train_sep_dir)
 

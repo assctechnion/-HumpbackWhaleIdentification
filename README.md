@@ -12,6 +12,8 @@ An educational (closed) [Kaggle challenge](https://www.kaggle.com/c/whale-catego
 - [Discussion](#Discussion)
 - [Conclusion](#Conclusion)
 
+just checking
+
 ## Introduction
 ## Related Work
 ## Implementation

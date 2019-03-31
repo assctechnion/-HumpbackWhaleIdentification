@@ -26,9 +26,9 @@ This section is divided to kaggle submissions, thus describing our work in layer
 run `dataset_2_train_val_subfolders`
 
 #### PreProcessing
-*Random resize crop
-*Random horizontal flip
-*Normalization
+* Random resize crop
+* Random horizontal flip
+* Normalization
 
 
 #### Network Architecture
@@ -42,5 +42,23 @@ highest probabilities are 'new_whale'
 #### Conclusions and ToDO's
 - [ ] find a way out of new_whale local minima
 ### Submission #1
+
+#### Dataset
+* Taking in account all classes
+* Randomly splitting to train-val with 25% val.
+
+run `dataset_2_train_val_subfolders`
+
+#### PreProcessing
+* Random resize crop
+* Random horizontal flip
+* Normalization
+
+
+#### Network Architecture
+Resnet50 with last layer FC with 4251 features 
+#### Results
+Whale competiton score of 0.008
+
 ## Discussion
 ## Conclusion

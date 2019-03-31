@@ -13,9 +13,13 @@ An educational (closed) [Kaggle challenge](https://www.kaggle.com/c/whale-catego
 ## Introduction
 ## Related Work
 ## Implementation
+This section is divided to kaggle submissions, thus describing our work in layers.
 ### Submission #0
 #### Dataset
+* Ignoring classes with less than 5 samples
+* Randomly splitting to train-val with 25% val.
 #### PreProcessing
+No preprocessing
 #### Network Architecture
 #### Results
 ### Submission #1

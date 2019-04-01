@@ -26,9 +26,15 @@ This section is divided to kaggle submissions, thus describing our work in layer
 run `dataset_2_train_val_subfolders`
 
 #### PreProcessing
-No preprocessing
+*Random resize crop
+*Random horizontal flip
+*Normalization
+
+
 #### Network Architecture
+Resnet50 with last layer FC with 313 features (Number of whales with more then 5 occurances)
 #### Results
+Whale competiton score of 0.324
 ### Submission #1
 ## Discussion
 ## Conclusion

@@ -1,7 +1,7 @@
 # Humpback Whale Identification
 046003 Technion course project
 
-Amir Saad & Sahar Sela (Carmel)
+Amir Saad & Sahar Carmel
 
 An educational (closed) [Kaggle challenge](https://www.kaggle.com/c/whale-categorization-playground)
 

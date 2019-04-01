@@ -26,9 +26,9 @@ This section is divided to kaggle submissions, thus describing our work in layer
 run `dataset_2_train_val_subfolders`
 
 #### PreProcessing
-*Random resize crop
-*Random horizontal flip
-*Normalization
+* Random resize crop
+* Random horizontal flip
+* Normalization
 
 
 #### Network Architecture

@@ -36,5 +36,23 @@ Resnet50 with last layer FC with 313 features (Number of whales with more then 5
 #### Results
 Whale competiton score of 0.324
 ### Submission #1
+
+#### Dataset
+* Taking in account all classes
+* Randomly splitting to train-val with 25% val.
+
+run `dataset_2_train_val_subfolders`
+
+#### PreProcessing
+* Random resize crop
+* Random horizontal flip
+* Normalization
+
+
+#### Network Architecture
+Resnet50 with last layer FC with 4251 features 
+#### Results
+Whale competiton score of 0.008
+
 ## Discussion
 ## Conclusion

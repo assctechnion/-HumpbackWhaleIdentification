@@ -35,6 +35,19 @@ run `dataset_2_train_val_subfolders`
 Resnet50 with last layer FC with 313 features (Number of whales with more then 5 occurances)
 #### Results
 Whale competiton score of 0.324
+This is a pretty good score for a very simple implementation!
+**But** examining the network's output reveals that we went into a **loacl minima** where all
+highest probabilities are 'new_whale'
+
+| Image         | Id            |
+| ------------- |:-------------:|
+| 00029b3a.jpg  | new_whale w_01cbcbf w_073b15e w_0d2dc7e w_030294d 	 |
+| 0003c693.jpg  | new_whale w_01cbcbf w_073b15e w_0d2dc7e w_0122d85      |
+| 000bc353.jpg  | new_whale w_0fe48f3 w_01cbcbf w_0e25cf2 w_0122d85      |
+
+
+#### Conclusions and ToDO's
+- [ ] find a way out of new_whale local minima
 ### Submission #1
 
 #### Dataset

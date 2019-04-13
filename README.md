@@ -48,10 +48,15 @@ of the estimation defined by TP/(TP+FP). In our case we belive it is calculated 
 ![o](https://github.com/assctechnion/-HumpbackWhaleIdentification/blob/master/Documents/simlifiedP.PNG)
 
 ### Hardware
-The NNs where trained on a personal computer with GeforceRTX2060 GPU wich is equivalent TBD
+The NNs where trained on a personal computer with GeforceRTX2060 GPU.
 
 
 ## Related Work
+
+The winning architecture for the competition used Siemese neural network. Siemese neural network consist of 2 CNN which transforms input image into a vector of features and the other one compares each picture and determine the species of the whale. Aside from this architecture no other competitor shared his approach. Other similar problems like Dog breed classification which uses ImageNet related networks.
+ 
+The main issue regarding the competition was the data since many of the classes in the dataset has few image to train on. A lot of work was published trying to solve this issue, mainly utilising data augmentation. Also many of the pictures have unrelated info inside them such as captions, sky, and background, a bounding box models was trained in order to reduce this unrelated noise.
+
 ## Dataset Exploration
 ### 'new_whale' class
 Unlike all whale ID classes, 'new_whale' class training set is huge.
@@ -91,7 +96,10 @@ most of the segmentaion output looks like that.
  
 ## Implementation
 This section is divided to kaggle submissions, thus describing our work in layers.
-### Submission #0
+
+
+### Submission #0 - small portion of classes
+
 #### Dataset
 * Ignoring classes with less than 5 samples
 * Randomly splitting to train-val with 25% val.
@@ -99,7 +107,7 @@ This section is divided to kaggle submissions, thus describing our work in layer
 run `dataset_2_train_val_subfolders`
 
 #### PreProcessing
-* Random resize crop
+* Random crop and resize
 * Random horizontal flip
 * Normalization
 
@@ -121,16 +129,19 @@ highest probabilities are 'new_whale'
 
 #### Conclusions and ToDO's
 - [ ] find a way out of new_whale local minima
-### Submission #1
+
+
+### Submission #1 - all classes 
 
 #### Dataset
 * Taking in account all classes
 * Randomly splitting to train-val with 25% val.
+	- duplicating images from classes with single sample
 
 run `dataset_2_train_val_subfolders`
 
 #### PreProcessing
-* Random resize crop
+* Random crop and resize
 * Random horizontal flip
 * Normalization
 
@@ -138,9 +149,47 @@ run `dataset_2_train_val_subfolders`
 #### Network Architecture
 Resnet50 with last layer FC with 4251 features 
 #### Results
-Whale competiton score of 0.008
+Whale competiton score of **0.008** after **epochs**
 
-### Submission #2
+Thats pretty shity.. 
+Not to much to say here, many things could be wrong..
 
+### Submission #2 - Inflating training data & using resnet 18
+
+#### Dataset
+In order to deal with high peaked class size distribution we 'inflated' each class to a given size.
+* *Random crop and resize*
+*    
+#### PreProcessing
+* Random crop and resize
+* Random horizontal flip
+* Normalization
+* **Tilting imgs**
+
+#### Network Architecture
+Resnet18 with last layer FC with 4251 features 
+#### Results
+
+The main difference which matters the most for this submission was the inflating of the data. Since many classes has very few data for training and since the augmentation we implement is taking place every time an image is loaded. We decided to simply duplicate the images since the augmentation process in random. The classes image numbers was inflated to the number of the class which has the most pictures aside from new_whale in order to balance the data set. Because of hardware restrictions and since the data is now 50 times larger we had to switch to a smaller network ResNet18 pertained with last FC layer being learned. The results for this submission was a order of magnitude better 0.018. To summarise, the balance created by inflating the pictures improved the performance of the network, still complicated data augmentation needs to be done  in order for the network to succeed.
+
+### Submission #3 - Ignoring 'new_whale' class , grayscaling images
+#### Dataset
+#### PreProcessing
+* Random crop and resize
+* Random horizontal flip
+* Normalization
+* Tilting
+* **grayscaling images** - train & test
+
+#### Network Architecture
+Resnet18 with last layer FC with 4250 features 
+
+#### Results
+
+### Submission #4 - Semantic segmentaion pre-processing
+#### Dataset
+#### PreProcessing
+#### Network Architecture
+#### Results
 ## Discussion
 ## Conclusion

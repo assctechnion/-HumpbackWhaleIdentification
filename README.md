@@ -14,6 +14,40 @@ An educational (closed) [Kaggle challenge](https://www.kaggle.com/c/whale-catego
 - [Conclusion](#Conclusion)
 
 ## Introduction
+In the Humpback Whale Identification kaggle competition we are challenged to build an algorithm to identifying whale species in images.
+### Dataset description
+The data base includes 4251 whale calsses:
+- [ ] 4250 whale IDs
+	- about half of these classes contain only 1 sample
+- [ ] 'new_whale' class specifing unidentified whales
+	- this class contains 630 images
+
+** An 'inverse' histogram of the dataset:**
+
+Xaxis: quantity , Yaxis: number of classes wich holds that quantity
+- [o](https://github.com
+
+**Images from the data set for example:**
+
+- [o](https://github.com)
+
+### Competition's score evaluation
+Submission is done by a 'csv' file containing maximum 5 ID estimations for each 
+image in the test set. The score is evaluated by:
+
+- [o](https://github)
+
+Wich is the mean average precission 
+Where U is the total number of images , n is the number of estimations for each image, and P(k) is the percission 
+of the estimation defined by TP/(TP+FP). In our case we belive it is calculated simply by:
+
+- [o](httpss://github)
+
+### Hardware
+The NNs where trained on a personal computer with GeforceRTX2060 GPU wich is equivalent TBD
+
+### Competition's score evaluation
+
 ## Related Work
 ## Dataset Exploration
 ## Implementation

@@ -23,7 +23,7 @@ The data base includes 4251 whale calsses:
 - [ ] 'new_whale' class specifing unidentified whales
 	- this class contains 630 images
 
-** An 'inverse' histogram of the dataset:**
+**An 'inverse' histogram of the dataset:**
 
 - x-axis: quantity
 

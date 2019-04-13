@@ -65,6 +65,11 @@ Unlike all whale ID classes, 'new_whale' class training set is huge.
 
 We will use this fact to explore the scoring method a bit:
 #### All 'new_whale' submission - 1st' guess 
+| Image         | Id            |
+| ------------- |:-------------:|
+| 00029b3a.jpg  | new_whale	 |
+| 0003c693.jpg  | new_whale  |
+| ... | ...  |
 #### All 'new_whale' submission - 5th' guess
 
 ## Integrating a semantic-segmentaion network: A bit brute force

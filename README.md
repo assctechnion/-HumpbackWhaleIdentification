@@ -64,7 +64,7 @@ Unlike all whale ID classes, 'new_whale' class training set is huge.
 - [ ] *note:* This will be turned out as a **local minima**. see submission #0 results.
 
 We will use this fact to explore the scoring method a bit:
-#### All 'new_whale' submission - first guess 
+#### All 'new_whale' submission - 1st' guess 
 #### All 'new_whale' submission - 5th' guess
 
 ## Integrating a semantic-segmentaion network: A bit brute force
@@ -185,6 +185,8 @@ The main difference which matters the most for this submission was the inflating
 Resnet18 with last layer FC with 4250 features 
 
 #### Results
+
+From submission 2 we noticed that none of the test predictions were new_whale, it makes sense since new_whale is a diverse class with no common features. In order to improve that, we ignored the new_whale class at the train and val data set and made a rule saying that the 4 first predictions of the network will be the network output, the 5th guess will be new_whale since we know that there is a good chance that the species in the picture is not known. We have concluded the last idea directly from the data which new_whale has about 6 times more data then the other whales. In this submission we transformed all of the pictures to grey scale. We did it since 47.5% of the images in the data set are in grayscale and concluded that color might affect the performance. The final submission result was ~0.6 which is 6 times better than the last result. Meaning we are on the right path..
 
 ### Submission #4 - Semantic segmentaion pre-processing
 #### Dataset

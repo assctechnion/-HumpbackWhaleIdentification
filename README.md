@@ -53,6 +53,15 @@ The NNs where trained on a personal computer with GeforceRTX2060 GPU wich is equ
 
 ## Related Work
 ## Dataset Exploration
+### 'new_whale' class
+Unlike all whale ID classes, 'new_whale' class training set is huge.
+
+- [ ] *note:* This will be turned out as a **local minima**. see submission #0 results.
+
+We will use this fact to explore the scoring method a bit:
+#### All 'new_whale' submission - first guess 
+#### All 'new_whale' submission - 5th' guess
+
 ## Integrating a semantic-segmentaion network: A bit brute force
 Inspired by a bounding box technuiqe that was used by other kernels we tried running a 
 segmentaion network to label only the whale in each image.
@@ -74,6 +83,9 @@ We preprocessed our dataset by masking out **sky** and **sea** labels estimated 
 
 <img src="https://github.com/assctechnion/-HumpbackWhaleIdentification/blob/master/Documents/badSegExample.jpg" width="600"/> 
 <img src="https://github.com/assctechnion/-HumpbackWhaleIdentification/blob/master/Documents/badSegExample2.jpg" width="600"/> 
+
+*note:* Is the last result really unusefull? maybe the important features are included and haven't been masked.
+most of the segmentaion output looks like that.
 
 *note:* We understand(!) that segmenting an image before pushing it into an object detection CNN could be theoreticly non contributory. Yet we believe that due to the very few amount of images for each class it may help (worth a try).
  
@@ -127,6 +139,8 @@ run `dataset_2_train_val_subfolders`
 Resnet50 with last layer FC with 4251 features 
 #### Results
 Whale competiton score of 0.008
+
+### Submission #2
 
 ## Discussion
 ## Conclusion

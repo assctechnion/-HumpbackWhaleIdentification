@@ -164,7 +164,7 @@ In order to deal with high peaked class size distribution we 'inflated' each cla
 * Random crop and resize
 * Random horizontal flip
 * Normalization
-* **Tilting imgs**
+* **Tilting imags**
 
 #### Network Architecture
 Resnet18 with last layer FC with 4251 features 
@@ -193,5 +193,8 @@ From submission 2 we noticed that none of the test predictions were new_whale, i
 #### PreProcessing
 #### Network Architecture
 #### Results
+
 ## Discussion
+
 ## Conclusion
+

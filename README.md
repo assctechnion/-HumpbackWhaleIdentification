@@ -21,7 +21,7 @@ The data base includes 4251 whale calsses:
 - [ ] 4250 whale IDs
 	- about half of these classes contain only 1 sample
 - [ ] 'new_whale' class specifing unidentified whales
-	- this class contains 630 images
+	- this class contains 810 images
 
 **An 'inverse' histogram of the dataset:**
 
@@ -64,13 +64,69 @@ Unlike all whale ID classes, 'new_whale' class training set is huge.
 - [ ] *note:* This will be turned out as a **local minima**. see submission #0 results.
 
 We will use this fact to explore the scoring method a bit:
-#### All 'new_whale' submission - 1st' guess 
+#### All 'new_whale' submission - as 1st' guess 
 | Image         | Id            |
 | ------------- |:-------------:|
 | 00029b3a.jpg  | new_whale	 |
 | 0003c693.jpg  | new_whale  |
 | ... | ...  |
-#### All 'new_whale' submission - 5th' guess
+
+*Score: 0.324*
+
+Meaning 32.4% of the test set are labeled - new_whale
+
+#### All 'new_whale' submission - as 2nd' guess 
+
+**using ID of class with only single sample 'w_0122d85'**
+
+| Image         | Id            |
+| ------------- |:-------------:|
+| 00029b3a.jpg  | w_0122d85 new_whale	 |
+| 0003c693.jpg  | w_0122d85 new_whale  |
+| ... | ...  |
+
+*Score: 0.162*
+
+Which is exactly 1/2 of 'new_whale' portion 0.324 as expected from Score evaluation clause
+
+#### All 'new_whale' submission - as 3rd' guess 
+
+
+| Image         | Id            |
+| ------------- |:-------------:|
+| 00029b3a.jpg  | w_0122d85 w_0122d85 new_whale	 |
+| 0003c693.jpg  | w_0122d85 w_0122d85 new_whale  |
+| ... | ...  |
+
+*Score: 0.108*
+
+Which is 1/3 of 'new_whale' portion 0.324 as expected from Score evaluation clause
+
+#### All 'new_whale' submission - as 3rd' guess 
+
+
+| Image         | Id            |
+| ------------- |:-------------:|
+| 00029b3a.jpg  | w_0122d85 w_0122d85 w_0122d85 new_whale  |
+| 0003c693.jpg  | w_0122d85 w_0122d85 w_0122d85 new_whale  |
+| ... | ...  |
+
+*Score: 0.081*
+
+Which is 1/4 of 'new_whale' portion 0.324 as expected from Score evaluation clause
+
+#### All 'new_whale' submission - as 3rd' guess 
+
+
+| Image         | Id            |
+| ------------- |:-------------:|
+| 00029b3a.jpg  | w_0122d85 w_0122d85 w_0122d85 w_0122d85 new_whale  |
+| 0003c693.jpg  | w_0122d85 w_0122d85 w_0122d85 w_0122d85 new_whale  |
+| ... | ...  |
+
+*Score: 0.064*
+
+Which is 1/5 of 'new_whale' portion 0.324 as expected from Score evaluation clause
 
 ## Integrating a semantic-segmentaion network: A bit brute force
 Inspired by a bounding box technuiqe that was used by other kernels we tried running a 

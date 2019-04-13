@@ -197,7 +197,7 @@ highest probabilities are 'new_whale'
 #### Dataset
 * Taking in account all classes
 * Randomly splitting to train-val with 25% val.
-	- duplicating images from classes with single sample
+	- **duplicating images from classes with single sample**
 
 run `dataset_2_train_val_subfolders`
 
@@ -218,9 +218,11 @@ Not to much to say here, many things could be wrong..
 ### Submission #2 - Inflating training data & using resnet 18
 
 #### Dataset
-In order to deal with high peaked class size distribution we 'inflated' each class to a given size.
-* *Random crop and resize*
-*    
+In order to deal with high peaked class size distribution we 'inflated' each class to a given size (duplicated images).
+* Taking in account all classes
+* Randomly splitting to train-val with 25% val.
+* **Inflating all classes upto 50 samples**
+ 
 #### PreProcessing
 * Random crop and resize
 * Random horizontal flip
@@ -234,7 +236,13 @@ Resnet18 with last layer FC with 4251 features
 The main difference which matters the most for this submission was the inflating of the data. Since many classes has very few data for training and since the augmentation we implement is taking place every time an image is loaded. We decided to simply duplicate the images since the augmentation process in random. The classes image numbers was inflated to the number of the class which has the most pictures aside from new_whale in order to balance the data set. Because of hardware restrictions and since the data is now 50 times larger we had to switch to a smaller network ResNet18 pertained with last FC layer being learned. The results for this submission was a order of magnitude better 0.018. To summarise, the balance created by inflating the pictures improved the performance of the network, still complicated data augmentation needs to be done  in order for the network to succeed.
 
 ### Submission #3 - Ignoring 'new_whale' class , grayscaling images
+
 #### Dataset
+* Taking in account all classes
+* Randomly splitting to train-val with 25% val.
+* Inflating all classes upto 50 samples
+* **Not training on 'new_whale' class**
+
 #### PreProcessing
 * Random crop and resize
 * Random horizontal flip
@@ -252,8 +260,23 @@ From submission 2 we noticed that none of the test predictions were new_whale, i
 ### Submission #4 - Semantic segmentaion pre-processing
 
 #### Dataset
+* Taking in account all classes
+* Randomly splitting to train-val with 25% val.
+* Inflating all classes upto 50 samples
+* Not training on 'new_whale' class
+* **implementing in DataSet segment masked images (preproessing)**:
+	- see explenation above at - Integrating a semantic-segmentaion network
+
 #### PreProcessing
+* Random crop and resize
+* Random horizontal flip
+* Normalization
+* Tilting
+* grayscaling images - train & test
+
 #### Network Architecture
+Resnet50 with last layer FC with 4250 features 
+
 #### Results
 Provided that our images are not clean and has background noise, we tried to minimise the area which our whales fluke resides in the pictures. We used the segmentation algorithm explained above to mask the relevant areas of the whale fluke. As the results suggests, no major difference resulted for this augmentation (score of 0.65).
 
@@ -261,6 +284,14 @@ Provided that our images are not clean and has background noise, we tried to min
 The main issue we tried to overcome was the data issue. Mathematically speaking ImageNet networks with the architecture mentioned above seems to fail with this problem. Since we had 2 weeks to work on this project we would like to propose further action items we should and will do next.
 *Bounding boxing the whale tail in order to reduce the noise and background.
 *Various other ImageNet architectures (GoogleNet, ResNet from higher levels)
+
+### Our main 'Why didn't it work' intuition
+During all our submissions we achieved relatively good training accuracy and validation accuracy 
+while recieving a very low score at submissions (even though the score evaluation is more friendly then our accuracy calculation!)
+
+We believe the reason for this kind of phenomena comes from the that about half of the classes contains only a single sample.
+Therefore half of the classes in the validation set are actualy an exect duplication of the training set.
+**Thus overfitting is inevitable!**
 
 ## Conclusion
 Whale fluke identification challenge was a blast. Yes, we made our own scripts and made it work, experienced with Pytorch and the relevant modules. No, we did not succeed at making a good one but hey, we just started.

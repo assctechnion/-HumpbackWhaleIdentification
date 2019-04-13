@@ -54,15 +54,25 @@ The NNs where trained on a personal computer with GeforceRTX2060 GPU wich is equ
 ## Related Work
 ## Dataset Exploration
 ## Integrating a semantic-segmentaion network: A bit brute force
-Inspired yb a bounding box technuiqe that was used by other kernels we tried running a 
+Inspired by a bounding box technuiqe that was used by other kernels we tried running a 
 segmentaion network to label only the whale in each image.
 
-We ran into a [pytorch implemented Semantic Segmentation network](https://github.com/CSAILVision/semantic-segmentation-pytorch)
+We ran into a [pytorch implemented Semantic Segmentation network](https://github.com/CSAILVision/semantic-segmentation-pytorch) by MIT CSAIL
+trained on 150 labels.
 <img src="https://github.com/CSAILVision/semantic-segmentation-pytorch/blob/master/teaser/ADE_val_00000278.png" width="900"/>
 <img src="https://github.com/CSAILVision/semantic-segmentation-pytorch/blob/master/teaser/ADE_val_00000278.png" width="900"/>
 [From left to right: Test Image, Ground Truth, Predicted Result]
 
+We preprocessed our dataset by masking out **sky** and **sea** labels estimated by the semantic segmentation post-trained network.
 
+** We got some good results:**
+<img src="https://github.com/CSAILVision/semantic-segmentation-pytorch/blob/master/teaser/ADE_val_00000278.png" width="900"/>
+
+** We got some unuseful results:**
+<img src="https://github.com/CSAILVision/semantic-segmentation-pytorch/blob/master/teaser/ADE_val_00000278.png" width="900"/> 
+
+*note:* We understand(!) that segmenting an image before pushing it into an object detection CNN could be theoreticly non contributory. Yet we believe that due to the very few amount of images for each class it may help (worth a try).
+ 
 ## Implementation
 This section is divided to kaggle submissions, thus describing our work in layers.
 ### Submission #0

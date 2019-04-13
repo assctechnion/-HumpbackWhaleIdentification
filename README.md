@@ -285,7 +285,7 @@ The main issue we tried to overcome was the data issue. Mathematically speaking 
 *Bounding boxing the whale tail in order to reduce the noise and background.
 *Various other ImageNet architectures (GoogleNet, ResNet from higher levels)
 
-### Our main 'Why didn't it work' intuition
+### Our main 'Why didn't it work?' intuition
 During all our submissions we achieved relatively good training accuracy and validation accuracy 
 while recieving a very low score at submissions (even though the score evaluation is more friendly then our accuracy calculation!)
 

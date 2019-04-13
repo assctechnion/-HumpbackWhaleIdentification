@@ -9,7 +9,7 @@ An educational (closed) [Kaggle challenge](https://www.kaggle.com/c/whale-catego
 - [Introduction](#Introduction)
 - [Related Work](#Related-Work)
 - [Dataset Exploration](#Dataset-Exploration)
-- [Integrating semantic-segmentaion network](#Integrating-semantic-segmentaion-network-a-bit-brute-force)
+- [Integrating a semantic-segmentaion network](#Integrating-a-semantic-segmentaion-network-a-bit-brute-force)
 - [Implementation](#Implementation)
 - [Discussion](#Discussion)
 - [Conclusion](#Conclusion)
@@ -53,7 +53,16 @@ The NNs where trained on a personal computer with GeforceRTX2060 GPU wich is equ
 
 ## Related Work
 ## Dataset Exploration
-## Integrating-semantic-segmentaion-network-a-bit-brute-force
+## Integrating a semantic-segmentaion network: A bit brute force
+Inspired yb a bounding box technuiqe that was used by other kernels we tried running a 
+segmentaion network to label only the whale in each image.
+
+We ran into a [pytorch implemented Semantic Segmentation network](https://github.com/CSAILVision/semantic-segmentation-pytorch)
+<img src="./teaser/ADE_val_00000278.png" width="900"/>
+<img src="./teaser/ADE_val_00001519.png" width="900"/>
+[From left to right: Test Image, Ground Truth, Predicted Result]
+
+
 ## Implementation
 This section is divided to kaggle submissions, thus describing our work in layers.
 ### Submission #0

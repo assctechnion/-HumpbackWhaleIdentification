@@ -58,8 +58,8 @@ Inspired yb a bounding box technuiqe that was used by other kernels we tried run
 segmentaion network to label only the whale in each image.
 
 We ran into a [pytorch implemented Semantic Segmentation network](https://github.com/CSAILVision/semantic-segmentation-pytorch)
-<img src="./teaser/ADE_val_00000278.png" width="900"/>
-<img src="./teaser/ADE_val_00001519.png" width="900"/>
+<img src="https://github.com/CSAILVision/semantic-segmentation-pytorch/blob/master/teaser/ADE_val_00000278.png" width="900"/>
+<img src="https://github.com/CSAILVision/semantic-segmentation-pytorch/blob/master/teaser/ADE_val_00000278.png" width="900"/>
 [From left to right: Test Image, Ground Truth, Predicted Result]
 
 

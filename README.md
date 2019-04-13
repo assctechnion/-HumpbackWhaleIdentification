@@ -65,13 +65,13 @@ trained on 150 labels.
 
 We preprocessed our dataset by masking out **sky** and **sea** labels estimated by the semantic segmentation post-trained network.
 
-** We got some good results:**
-<img src="https://github.com/assctechnion/-HumpbackWhaleIdentification/blob/master/Documents/goodSegExample.jpg" width="900"/>
-<img src="https://github.com/assctechnion/-HumpbackWhaleIdentification/blob/master/Documents/goodSegExample2.jpg" width="900"/>
+**We got some good results:**
+<img src="https://github.com/assctechnion/-HumpbackWhaleIdentification/blob/master/Documents/goodSegExample.jpg" width="600"/>
+<img src="https://github.com/assctechnion/-HumpbackWhaleIdentification/blob/master/Documents/goodSegExample2.jpg" width="600"/>
 
-** and some unuseful results:**
-<img src="https://github.com/assctechnion/-HumpbackWhaleIdentification/blob/master/Documents/badSegExample.jpg" width="900"/> 
-<img src="https://github.com/assctechnion/-HumpbackWhaleIdentification/blob/master/Documents/badSegExample2.jpg" width="900"/> 
+**and some unuseful results:**
+<img src="https://github.com/assctechnion/-HumpbackWhaleIdentification/blob/master/Documents/badSegExample.jpg" width="600"/> 
+<img src="https://github.com/assctechnion/-HumpbackWhaleIdentification/blob/master/Documents/badSegExample2.jpg" width="600"/> 
 
 *note:* We understand(!) that segmenting an image before pushing it into an object detection CNN could be theoreticly non contributory. Yet we believe that due to the very few amount of images for each class it may help (worth a try).
  

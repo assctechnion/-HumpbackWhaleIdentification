@@ -255,8 +255,12 @@ From submission 2 we noticed that none of the test predictions were new_whale, i
 #### PreProcessing
 #### Network Architecture
 #### Results
+Provided that our images are not clean and has background noise, we tried to minimise the area which our whales fluke resides in the pictures. We used the segmentation algorithm explained above to mask the relevant areas of the whale fluke. As the results suggests, no major difference resulted for this augmentation (score of 0.65).
 
 ## Discussion
+The main issue we tried to overcome was the data issue. Mathematically speaking ImageNet networks with the architecture mentioned above seems to fail with this problem. Since we had 2 weeks to work on this project we would like to propose further action items we should and will do next.
+*Bounding boxing the whale tail in order to reduce the noise and background.
+*Various other ImageNet architectures (GoogleNet, ResNet from higher levels)
 
 ## Conclusion
-
+Whale fluke identification challenge was a blast. Yes, we made our own scripts and made it work, experienced with Pytorch and the relevant modules. No, we did not succeed at making a good one but hey, we just started.

@@ -9,6 +9,7 @@ An educational (closed) [Kaggle challenge](https://www.kaggle.com/c/whale-catego
 - [Introduction](#Introduction)
 - [Related Work](#Related-Work)
 - [Dataset Exploration](#Dataset-Exploration)
+- [Integrating semantic-segmentaion network](#Integrating-semantic-segmentaion-network-a-bit-brute-force)
 - [Implementation](#Implementation)
 - [Discussion](#Discussion)
 - [Conclusion](#Conclusion)
@@ -24,9 +25,9 @@ The data base includes 4251 whale calsses:
 
 ** An 'inverse' histogram of the dataset:**
 
-- x - axis: quantity
+- x-axis: quantity
 
-- y - axis: number of classes wich holds that quantity
+- y-axis: number of classes wich holds that quantity
 
 ![o](https://github.com/assctechnion/-HumpbackWhaleIdentification/blob/master/Documents/Num%20of%20categories%20by%20images.png)
 
@@ -34,7 +35,7 @@ The data base includes 4251 whale calsses:
 
 ![o](https://github.com/assctechnion/-HumpbackWhaleIdentification/blob/master/Documents/Whales%20pictures%20example.png)
 
-### Competition's score evaluation
+### Score evaluation
 Submission is done by a 'csv' file containing maximum 5 ID estimations for each 
 image in the test set. The score is evaluated by:
 
@@ -49,10 +50,10 @@ of the estimation defined by TP/(TP+FP). In our case we belive it is calculated 
 ### Hardware
 The NNs where trained on a personal computer with GeforceRTX2060 GPU wich is equivalent TBD
 
-### Competition's score evaluation
 
 ## Related Work
 ## Dataset Exploration
+## Integrating-semantic-segmentaion-network-a-bit-brute-force
 ## Implementation
 This section is divided to kaggle submissions, thus describing our work in layers.
 ### Submission #0
